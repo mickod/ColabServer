@@ -148,11 +148,19 @@ app.controller('WebUploadCtrl',[ '$scope', '$upload','colabConfig', function($sc
 /** Modules **/
 
 /* module for general app config that can be injected as a dependency where needed */
-angular.module('colabConfig', [])
-  .value('colabConfig', {
+var colabConfigModule = angular.module('colabConfig', []);	  
+  //var hosturl = $location.host();
+  /*.value('colabConfig', {
 	  // Set the base URL for the colab server to be the host URL for the server hosting
 	  // Angular in this case. If you wanted to host the Angular and the node.js ColabSrever on
 	  //different server, to allow them scale separatly for example, his can simply be changed.
-	  var hosturl = $location.host()
-	  colabServerBaseURL: hosturl
-});
+	  //colabServerBaseURL: $location.host(),
+	  colabServerBaseURL: 'http://localhost:3000'	  
+	})*/
+
+	colabConfigModule.factory('colabConfig', ['$location', function ($location) {
+		//var hosturl = $location.host();
+		var configReturnObject = new Object();
+		configReturnObject.colabServerBaseURL = $location.host();
+		return configReturnObject;
+}]);
