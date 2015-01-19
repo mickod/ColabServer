@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+	    <!-- Meta-Information -->
+	    <title>Colab</title>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="description" content="ACME Inc.">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+    <body ng-app="colabVideoServerWebApp">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Colab Video Server</p>
+		
+		<div ng-include='"templates/header.html"'></div>
+		<div ng-view></div>
+		<div ng-include='"templates/footer.html"'></div>
+
+		<!-- Vendor: Javascripts -->
+		<!-- 	includes: jQuery, bootstarp and angular-file-upload (to support file upload see link below) -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="js/third_party_libraries/angular-file-upload-shim.min.js"></script> 
+		
+
+		<!-- Vendor: Angular -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+		
+		<!-- script needed for file upload - must be added after angular scrips-->
+		<!-- 	see: https://github.com/danialfarid/angular-file-upload -->
+		<script src="js/third_party_libraries/angular-file-upload.min.js"></script> 
+
+		<!-- This app Website Javascripts -->
+		<script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='http://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

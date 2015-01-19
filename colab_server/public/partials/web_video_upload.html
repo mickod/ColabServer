@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row"> 
+		<div class="col-lg-12"> 
+			<h1 class="page-header">Upload Video</h1> 
+			<p>
+				This is to allow upload from the browser for test purposes - this is not intended to be used on a mobile device.
+			</p>
+		</div> 
+	</div> 
+	<div class="row" ng-controller="WebUploadCtrl">
+		<div class="col-lg-6">
+			<!-- The onclick="this.value = null" is an angular fix for a problem with the file section not being reset when
+				the same file names is used. This showed up when testng multile uploads of the same file - subsequent uploads
+				did not work. See for details: https://github.com/danialfarid/angular-file-upload/issues/235 -->
+			<input class="upload"  type="file" ng-file-select="onFileSelect($files)" onclick="this.value = null">
+			<p></p>
+		</div>
+		<div class="col-lg-6">
+			<button type="button" class="btn btn-warning btn-xs" ng-click="upload.abort()">Cancel Upload</button>
+		</div>
+						
+		<p></p>
+		<div class="col-md-4">
+			<div class="progress">
+			  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progressPerCent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progressPerCent}}%;">
+			    {{progressPerCent}}%
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+ </div>

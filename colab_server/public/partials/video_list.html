@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row"> 
+		<div class="col-md-12"> 
+			<h1 class="page-header">Uploaded Videos</h1> 
+		</div> 
+	</div> 
+	
+	<!-- div to contain the list of videos and a video player window -->
+	<div class="row" ng-controller="VideoListCtrl">
+		<!-- list of video -->
+    	<div class="col-md-6">
+			<ul>
+				<div ng-repeat="video in videoList">
+					<li class="list-inline" style="height:30px;" >
+						<button type="button" class="btn btn-info btn-xs" ng-click="playVideo(video)">Play</button>
+						<button type="button" class="btn btn-default btn-xs" ng-click="deleteVideo(video)">Delete</button>
+						{{video.file_name}}
+					</li>
+				</div>
+			</ul>
+		</div>
+		<!-- video player window -->
+		<div class="col-md-6" ng-include="playerWindowURL"></div>
+	</div>
+ </div>

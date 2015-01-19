@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row"> 
+		<div class="col-lg-12"> 
+			<h1 class="page-header">Test Video</h1> 
+		</div> 
+	</div> 
+	<div ng-controller="VideoPlayTestCtrl">
+		<video autoplay controls="true" src="{{collabServerTestVideoURL}}"></video>
+	</div>
+	<div>
+		<p>This page contains a test video to ensure the browser can support the usual video format used by Colab Server. When this page loads 
+			a video box should appear above this text and the video should start loading. Playback should start automatically after a 
+			couple of seconds, depnding on the speed of the internet connection.
+		</p>
+	</div>
+ </div>
