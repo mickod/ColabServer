@@ -161,6 +161,6 @@ var colabConfigModule = angular.module('colabConfig', []);
 	colabConfigModule.factory('colabConfig', ['$location', function ($location) {
 		//var hosturl = $location.host();
 		var configReturnObject = new Object();
-		configReturnObject.colabServerBaseURL = $location.host();
+		configReturnObject.colabServerBaseURL = ""; //The "" works here only when it is on the same server as node.js
 		return configReturnObject;
 }]);
