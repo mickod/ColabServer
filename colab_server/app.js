@@ -59,7 +59,7 @@ app.use(multer({
 		//includes
 		var dateNow = new Date();
 	    return filename + "_" + dateNow.toISOString().slice(0,-1)
-	}
+	},
 	
 	//Log start of file upload
 	onFileUploadStart: function (file) {
