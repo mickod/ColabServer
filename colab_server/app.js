@@ -104,13 +104,13 @@ router.get('/video_list', function(req, res) {
 		for (var i = list.length - 1; i >= 0; i--) {
 			
 			// For each file in the directory add an id and filename to the response
-			console.log('Looping through video files in directory: ', list, 'at index: ', i);
-			console.dir(list);
+			//XXXX Debug console.log('Looping through video files in directory: ', list, 'at index: ', i);
+			//XXXX Debug console.dir(list);
 	    	resp.push( 
 				{"index": i,
 				"file_name": list[i]}
 			);
-			//console.log('resp at iteration: ', i, " is: ", resp);
+			//XXXX Debug console.log('resp at iteration: ', i, " is: ", resp);
 	    }
 		
 		// Set the response to be sent
