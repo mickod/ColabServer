@@ -68,7 +68,7 @@ app.use(multer({
 	
 	//Log end of file upload
 	onFileUploadComplete: function (file) {
-	  console.log(file.fieldname + ' uploaded to  ' + file.path)
+	  console.log(file.originalname + ' uploaded to  ' + file.path)
 	  done=true;
 	}
 
@@ -76,8 +76,8 @@ app.use(multer({
 
 router.post('/web_video_upload', function(req, res) {
 	//Log the request details
-	console.log(req.body);
-    console.log(req.files);
+	//XXXX Debug console.log(req.body);
+    //XXXX Debug console.log(req.files);
 	
 	//Send a resposne
 	res.send('Video Uploading');
