@@ -76,8 +76,8 @@ app.use(multer({
 
 router.post('/web_video_upload', function(req, res) {
 	//Log the request details
-	console.log(req.body)
-    console.log(req.files)
+	console.log(req.body);
+    console.log(req.files);
 	
 	//Send a resposne
 	res.send('Video Uploading');
@@ -86,6 +86,9 @@ router.post('/web_video_upload', function(req, res) {
 
 // GET: route to return list of upload videos 
 router.get('/video_list', function(req, res) {
+	//Log the request details
+	console.log(req.body);
+	
 	// Get the path for the uploaded_video directory - in a real app the video list would likely be taken from 
 	// a database index table, but this is fine for us for now
 	var _p;
@@ -107,7 +110,7 @@ router.get('/video_list', function(req, res) {
 				{"index": i,
 				"file_name": list[i]}
 			);
-			console.log('resp at iteration: ', i, " is: ", resp);
+			//console.log('resp at iteration: ', i, " is: ", resp);
 	    }
 		
 		// Set the response to be sent
