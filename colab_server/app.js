@@ -75,6 +75,11 @@ app.use(multer({
 }));
 
 router.post('/web_video_upload', function(req, res) {
+	//Log the request details
+	console.log(req.body)
+    console.log(req.files)
+	
+	//Send a resposne
 	res.send('Video Uploading');
 	console.dir(req.files);
 });
