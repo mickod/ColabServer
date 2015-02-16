@@ -60,6 +60,17 @@ app.use(multer({
 		var dateNow = new Date();
 	    return filename + "_" + dateNow.toISOString().slice(0,-1)
 	}
+	
+	//Log start of file upload
+	onFileUploadStart: function (file) {
+	  console.log(file.originalname + ' is starting ...')
+	},
+	
+	//Log end of file upload
+	onFileUploadComplete: function (file) {
+	  console.log(file.fieldname + ' uploaded to  ' + file.path)
+	  done=true;
+	}
 
 }));
 
